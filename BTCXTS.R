@@ -33,11 +33,12 @@ btc3min = to.minutes3(btcxts)
 btc1min = to.minutes(btcxts, 1)
 btc30secs = to.period(btcxts, period="seconds", 30)
 btc5secs = to.period(btcxts, period="seconds", 5)
+btc1secs = to.period(btcxts, period="seconds", 1)
 
 #set time period for return calc
-bars = btc5secs
+bars = btc1secs
 
-periodicity(bars).
+periodicity(bars)
 #create returns for 3 min bars
 bars.Close = bars[,"btcxts.Close"]
 head(bars.Close)
